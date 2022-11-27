@@ -1,0 +1,66 @@
+<section role="main">
+    <div class="details-bg" *ngIf="details.poster_path"
+      [style.backgroundImage]="'url(https://image.tmdb.org/t/p/w500'+details.backdrop_path+')'">
+      <div class="custom_bg">
+        <div class="details-container">
+          <div style="padding: 0;background: transparent;">
+            <mat-grid-list cols="8" rowHeight="600px" gutterSize="0">
+              <mat-grid-tile colspan="2" gutterSize="0">
+                <img src="https://image.tmdb.org/t/p/w500{{details.poster_path}}" class="details-poster"
+                  alt="{{details.title}}" />
+              </mat-grid-tile>
+              <mat-grid-tile colspan="1" gutterSize="0">
+                </mat-grid-tile>
+              <mat-grid-tile colspan="5">
+                <mat-card-content class="details-info">
+                  <mat-card-title>
+                    <h2 class="movie-title">{{details.original_title}}
+                      <span class="release-date">({{details.release_date|dateFormat:'YYYY'}})</span>
+                    </h2>
+                  </mat-card-title>
+                  <h3>Overview</h3>
+                  <div class="overview-container">
+                    <p>
+                      {{details.overview}}
+                    </p>
+                  </div>
+                  <h3 class="featured" dir="auto">Featured Crew</h3>
+                  <ol class="detail-items">
+                    <li class="profile">
+                      <p class="character">Todd Phillips</p>
+                      <p>Director, Writer</p>
+                    </li>
+                    <li class="profile">
+                      <p class="character">Scott Silver</p>
+                      <p>Writer</p>
+                    </li>
+                    <li class="profile">
+                      <p class="character">English</p>
+                      <p>Original Language</p>
+                    </li>
+                    <li class="profile">
+                      <p class="character">{{details.runtime | runtimeFormat }}</p>
+                      <p>Runtime</p>
+                    </li>
+                    <li class="profile">
+                      <p class="character">{{details.budget | currency}}</p>
+                      <p>Budget</p>
+                    </li>
+                    <li class="profile">
+                      <p class="character">{{details.revenue | currency}}</p>
+                      <p>Revenue</p>
+                    </li>
+                  </ol>
+                  <div class="genres">
+                    <h3>Genres</h3>
+                      <mat-chip class="chip-item" 
+                        *ngFor="let genre of details.genres">{{genre.name}}</mat-chip>
+                  </div>
+                </mat-card-content>
+              </mat-grid-tile>
+            </mat-grid-list>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>

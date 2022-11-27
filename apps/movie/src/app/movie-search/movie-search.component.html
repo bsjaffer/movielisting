@@ -1,0 +1,15 @@
+<form class="example-form">
+    <mat-form-field class="example-full-width" appearance="fill">
+        <input type="text"
+               placeholder="Search"
+               aria-label="Search"
+               matInput
+               [formControl]="searchControl"
+               [matAutocomplete]="auto">
+        <mat-autocomplete autoActiveFirstOption #auto="matAutocomplete" >
+          <mat-option *ngFor="let option of options" [value]="option.value" (onSelectionChange)="onClick(option)" (click)="onClick(option)" >
+            {{option.name}}
+          </mat-option>
+        </mat-autocomplete>
+      </mat-form-field>
+</form>

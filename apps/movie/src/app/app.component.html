@@ -1,0 +1,32 @@
+<mat-toolbar color="primary">
+  <span  [routerLink]="['/']">Movie Listing App</span>
+ <span class="spacer"></span>
+  <mat-chip-option
+    color="accent"
+    [routerLink]="['/']"
+    [selected]="isSelected('/')"
+    >Popular</mat-chip-option
+  >
+  <span class="spacer"></span>
+  <mat-chip-option
+    color="accent"
+    [routerLink]="['/toprated']"
+    [selected]="isSelected('/toprated')"
+    >Top Rated</mat-chip-option
+  >
+  <span class="spacer"></span>
+  <mat-chip-option
+    color="accent"
+    [routerLink]="['/trending']"
+    [selected]="isSelected('/trending')"
+    >Trending</mat-chip-option
+  >
+
+  <div class="search-container">
+    <movie-movie-search></movie-movie-search>
+  </div>
+</mat-toolbar>
+<div class="container">
+  
+  <router-outlet></router-outlet>
+</div>

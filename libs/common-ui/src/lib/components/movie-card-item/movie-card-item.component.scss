@@ -1,0 +1,15 @@
+.movie-card {
+  margin: 5px;
+  cursor: pointer;
+}
+
+.movie-title {
+  font-weight: 700;
+  min-height: 34px;
+  white-space: wrap;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}

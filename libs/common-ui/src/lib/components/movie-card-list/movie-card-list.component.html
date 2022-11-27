@@ -1,0 +1,4 @@
+<div class="card-container">
+    <movie-card-item class="card-item" *ngFor="let item of items; let i = index" [item]="item" (onItemClick)="onClick($event)">
+    </movie-card-item>
+</div>
