@@ -15,10 +15,11 @@ This app is all about listing a movie list and its details using [themoviedb.org
 
 ## How to run the app
 
-Step 1: Use Git clone to close the repo 
-Step 2: npm install
-Step 3: nx serve movie
-Step 4: open http://localhost:4200 in browser
+
+- Step 1: Use Git clone to close the repo 
+- Step 2: **npm install**
+- Step 3: **nx serve movie**
+- Step 4: open http://localhost:4200 in browser
 
 ## Points to note
 
