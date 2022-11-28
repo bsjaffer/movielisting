@@ -1,5 +1,5 @@
-# movielisting
-movie listing app
+# My Movie Listing App
+My Movie Listing App
 
 
 ## Table of contents
