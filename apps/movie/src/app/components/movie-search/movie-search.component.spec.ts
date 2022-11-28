@@ -1,5 +1,7 @@
+import { NoopAnimationsModule } from '@angular/platform-browser/animations';
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
+import { HttpClientTestingModule } from '@angular/common/http/testing';
 import { MovieSearchComponent } from './movie-search.component';
 
 describe('MovieSearchComponent', () => {
@@ -8,7 +10,7 @@ describe('MovieSearchComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [MovieSearchComponent],
+      imports: [MovieSearchComponent,HttpClientTestingModule, NoopAnimationsModule ],
     }).compileComponents();
 
     fixture = TestBed.createComponent(MovieSearchComponent);

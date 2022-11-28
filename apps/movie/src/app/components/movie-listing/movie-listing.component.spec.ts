@@ -1,5 +1,6 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
+import { HttpClientTestingModule } from '@angular/common/http/testing';
 import { MovieListingComponent } from './movie-listing.component';
 
 describe('MovieListingComponent', () => {
@@ -8,7 +9,7 @@ describe('MovieListingComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [MovieListingComponent],
+      imports: [MovieListingComponent, HttpClientTestingModule],
     }).compileComponents();
 
     fixture = TestBed.createComponent(MovieListingComponent);

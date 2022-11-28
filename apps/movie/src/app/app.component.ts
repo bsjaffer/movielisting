@@ -1,4 +1,4 @@
-import { MovieSearchComponent } from './movie-search/movie-search.component';
+import { MovieSearchComponent } from './components/movie-search/movie-search.component';
 import { RouterModule } from '@angular/router';
 import {MatToolbarModule} from '@angular/material/toolbar';
 import {MatChipsModule} from '@angular/material/chips';

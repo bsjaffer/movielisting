@@ -1,7 +1,7 @@
 import { MovieDetails, RuntimeFormat, DateFormat } from '@movie/common-ui';
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { MovieApiService } from './../services/movieApi.service';
+import { MovieApiService } from '../../services/movieApi.service';
 import { Router, RouterModule, ActivatedRoute } from '@angular/router';
 import { MatGridListModule } from '@angular/material/grid-list';
 import { MatCardModule } from '@angular/material/card';
@@ -41,5 +41,8 @@ export class MovieDetailsComponent {
           this.details = data;
         });
     }
+  }
+  genreIdentity(index:number, item: any){
+    return item.id
   }
 }

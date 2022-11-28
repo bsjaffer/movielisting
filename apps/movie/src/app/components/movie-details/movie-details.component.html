@@ -1,5 +1,5 @@
 <section role="main">
-    <div class="details-bg" *ngIf="details.poster_path"
+    <div class="details-bg" *ngIf="details?.poster_path"
       [style.backgroundImage]="'url(https://image.tmdb.org/t/p/w500'+details.backdrop_path+')'">
       <div class="custom_bg">
         <div class="details-container">
@@ -54,7 +54,7 @@
                   <div class="genres">
                     <h3>Genres</h3>
                       <mat-chip class="chip-item" 
-                        *ngFor="let genre of details.genres">{{genre.name}}</mat-chip>
+                        *ngFor="let genre of details.genres; trackBy:genreIdentity">{{genre.name}}</mat-chip>
                   </div>
                 </mat-card-content>
               </mat-grid-tile>

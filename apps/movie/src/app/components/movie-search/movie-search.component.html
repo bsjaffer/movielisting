@@ -7,7 +7,7 @@
                [formControl]="searchControl"
                [matAutocomplete]="auto">
         <mat-autocomplete autoActiveFirstOption #auto="matAutocomplete" >
-          <mat-option *ngFor="let option of options" [value]="option.value" (onSelectionChange)="onClick(option)" (click)="onClick(option)" >
+          <mat-option *ngFor="let option of options;trackBy: optionIdentity" [value]="option.value" (onSelectionChange)="onClick(option)" (click)="onClick(option)" >
             {{option.name}}
           </mat-option>
         </mat-autocomplete>

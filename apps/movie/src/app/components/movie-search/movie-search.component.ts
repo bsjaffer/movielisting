@@ -5,7 +5,7 @@ import { MatInputModule } from '@angular/material/input';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { FormControl } from '@angular/forms';
-import { MovieApiService } from './../services/movieApi.service';
+import { MovieApiService } from './../../services/movieApi.service';
 import { Router } from '@angular/router';
 
 @Component({
@@ -54,5 +54,9 @@ export class MovieSearchComponent {
   public onClick(item: any) {
     this.searchControl.patchValue(item.name);
     this.router.navigate(['/details/' + item.value]);
+  }
+
+  public optionIdentity(index:number,item:any){
+    return item.value;
   }
 }

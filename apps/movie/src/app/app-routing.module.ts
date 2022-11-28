@@ -5,28 +5,28 @@ export const routes: Routes = [
   {
     path: '',
     loadComponent: () =>
-      import('./movie-listing/movie-listing.component').then(
+      import('./components/movie-listing/movie-listing.component').then(
         (c) => c.MovieListingComponent
       ),
   },
   {
     path: 'details/:movie-id',
     loadComponent: () =>
-      import('./movie-details/movie-details.component').then(
+      import('./components/movie-details/movie-details.component').then(
         (c) => c.MovieDetailsComponent
       ),
   },
   {
     path: 'toprated',
     loadComponent: () =>
-      import('./top-rated-movies/top-rated-movies.component').then(
+      import('./components/top-rated-movies/top-rated-movies.component').then(
         (c) => c.TopRatedMoviesComponent
       ),
   },
   {
     path: 'trending',
     loadComponent: () =>
-      import('./trending-movies/trending-movies.component').then(
+      import('./components/trending-movies/trending-movies.component').then(
         (c) => c.TrendingMoviesComponent
       ),
   },

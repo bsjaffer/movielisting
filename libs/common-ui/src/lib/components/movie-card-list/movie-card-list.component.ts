@@ -20,4 +20,8 @@ export class MovieCardListComponent {
   onClick(item: Movies){
     this.onItemClick.emit(item);
   }
+
+  public itemIdentity(index:number,item:Movies){
+    return item.id;
+  }
 }

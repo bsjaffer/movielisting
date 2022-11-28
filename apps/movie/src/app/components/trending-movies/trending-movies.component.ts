@@ -3,7 +3,7 @@ import {
   MoviesApiResponse,
   Movies,
 } from '@movie/common-ui';
-import { MovieApiService } from './../services/movieApi.service';
+import { MovieApiService } from './../../services/movieApi.service';
 import { Router, RouterModule } from '@angular/router';
 import { Component, Input } from '@angular/core';
 import { CommonModule } from '@angular/common';
